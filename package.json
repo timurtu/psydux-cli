@@ -6,6 +6,7 @@
   "scripts": {
     "test": "ava"
   },
+  "files": ["dist"],
   "preferGlobal": true,
   "bin": {
     "psydux": "dist/index.js"
