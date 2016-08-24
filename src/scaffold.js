@@ -15,7 +15,7 @@ if (checkArgs()) {
   
   const appName = args[0]
   const appDir = path.join(process.cwd(), appName)
-  const templateDir = path.join(__dirname, '../..', 'template')
+  const templateDir = path.join(__dirname, '..', 'template')
   
   log('cyan', `Scaffolding new application to ${appDir}`)
   
