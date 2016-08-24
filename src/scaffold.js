@@ -17,6 +17,7 @@ if (checkArgs()) {
   const appDir = path.join(process.cwd(), appName)
   const templateDir = path.join(__dirname, '..', 'template')
   
+  log('cyan', `Template dir ${templateDir}`)
   log('cyan', `Scaffolding new application to ${appDir}`)
   
   fs.mkdirAsync(appDir)
