@@ -32,7 +32,9 @@ if (checkArgs()) {
     'babel-core',
     'babel-loader',
     'url-loader',
+    'file-loader',
     'css-loader',
+    'node-sass',
     'sass-loader',
   ]
   
