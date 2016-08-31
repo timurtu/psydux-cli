@@ -12,6 +12,15 @@ const execAsync = Promise.promisify(require('child_process').exec)
 
 const args = process.argv.slice(2)
 
+function checkArgs() {
+  
+  if (!args[0] || args[1]) {
+    log('red', 'Invalid number of arguments. Usage: psydux (name-of-app)')
+  } else {
+    return true
+  }
+}
+
 if (checkArgs()) {
   
   const appName = args[0]
@@ -49,13 +58,4 @@ if (checkArgs()) {
       log('yellow', 'psydux')
     })
     .catch(e => log('red', e))
-}
-
-function checkArgs() {
-  
-  if (!args[0] || args[1]) {
-    log('red', 'Invalid number of arguments. Usage: psydux (name-of-app)')
-  } else {
-    return true
-  }
 }
