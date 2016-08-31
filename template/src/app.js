@@ -20,6 +20,6 @@ const createContainer = (...elements) => psy.el('div', {
 
 createContainer(
   createHeader('Hello, World!'),
-  createSubHeader('Here\'s where you\'d put some content'),
+  createSubHeader('Here is where you would put some content'),
   createList('how', 'are', 'you', 'doing', 'today?')
 )
