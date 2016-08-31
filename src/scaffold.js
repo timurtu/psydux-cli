@@ -2,6 +2,7 @@
  * Created by timur on 8/19/16.
  */
 
+import gulp from 'gulp'
 import path from 'path'
 import log from 'gutil-color-log'
 import Promise from 'bluebird'
@@ -17,20 +18,12 @@ if (checkArgs()) {
   const appDir = path.join(process.cwd(), appName)
   const templateDir = path.join(__dirname, '..', 'template')
   
-  log('cyan', `Template dir ${templateDir}`)
-  log('cyan', `Scaffolding new application to ${appDir}`)
+  log('cyan', `Creating psydux app at ${appDir}`)
+  
+  gulp.src(path.join(templateDir, '**/*'), { dot: true })
+    .pipe(gulp.dest(appDir))
   
   fs.mkdirAsync(appDir)
-    .then(() => fs.readdirAsync(templateDir))
-    .then(dirs => dirs.map(dir => {
-      fs.mkdirAsync(path.join(appDir, dir))
-      return dir
-    }))
-    .then(dirs => dirs.map(dir => {
-      fs.readdirAsync(path.join(templateDir, dir))
-        .then(files => files.map(file => fs.readFileAsync(path.join(templateDir, dir, file))
-          .then(content => fs.writeFileAsync(path.join(appDir, dir, file), content))))
-    }))
     .then(() => execAsync('npm init -y', { cwd: appDir }))
     .then(() => execAsync('npm install -D psydux', { cwd: appDir }))
     .then(() => {
