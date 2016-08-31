@@ -15,7 +15,7 @@ const args = process.argv.slice(2)
 function checkArgs() {
   
   if (!args[0] || args[1]) {
-    log('red', 'Invalid number of arguments. Usage: psydux (name-of-app)')
+    log('yellow', 'Invalid number of arguments. Usage: psydux (name-of-app)')
   } else {
     return true
   }
