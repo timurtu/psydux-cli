@@ -23,9 +23,23 @@ if (checkArgs()) {
   gulp.src(path.join(templateDir, '**/*'), { dot: true })
     .pipe(gulp.dest(appDir))
   
+  const dependencies = [
+    'psydux',
+    'babel-preset-es2015',
+    'babel-preset-es2016',
+    'webpack',
+    'webpack-dev-server',
+    'babel-core',
+    'babel-loader',
+    'url-loader',
+    'css-loader',
+    'sass-loader',
+  ]
+  
   fs.mkdirAsync(appDir)
     .then(() => execAsync('npm init -y', { cwd: appDir }))
-    .then(() => execAsync('npm install -D psydux', { cwd: appDir }))
+    .then(() => log('cyan', 'Installing dependencies...'))
+    .then(() => execAsync(`npm install -D ${dependencies.join(' ')}`, { cwd: appDir }))
     .then(() => {
       log('green', 'New application created successfully.')
       log('cyan', 'Enter the following commands to start the app.')

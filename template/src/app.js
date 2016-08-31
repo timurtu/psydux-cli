@@ -1,3 +1,3 @@
-import psy from 'psydux'
+// import psy from 'psydux'
 
 console.log('hey there')

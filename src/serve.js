@@ -3,7 +3,6 @@
  */
 
 import path from 'path'
-import Promise from 'bluebird'
 import log from 'gutil-color-log'
 import { argv } from 'yargs'
 import express from 'express'

@@ -3,12 +3,11 @@
  */
 
 import path from 'path'
-import gulp from 'gulp'
-import babel from 'gulp-babel'
+import log from 'gutil-color-log'
 import paths from './paths'
+import Promise from 'bluebird'
+const execAsync = Promise.promisify(require('child_process').exec)
 
-
-gulp.src(path.join(paths.src(), '**/*.js'))
-  .pipe(babel())
-  .pipe(gulp.dest(paths.dist()))
-
+execAsync(path.join(paths.bin(), 'webpack'))
+  .then(out => /ERROR/.test(out) ? log('red', out) : log('green', out))
+  .catch(e => log('red', e))

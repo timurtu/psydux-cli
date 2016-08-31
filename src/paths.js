@@ -12,6 +12,9 @@ const paths = {
   },
   dist: function () {
     return path.join(this.root, '.psydux/dist')
+  },
+  bin: function() {
+    return path.join(this.root, 'node_modules/.bin')
   }
 }
 
