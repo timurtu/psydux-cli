@@ -23,10 +23,11 @@ const paths = {
   }
 }
 
-gulp.task('lint', () => gulp.src([paths.fullSrc(), path.join(paths.template, '**/*.js'), paths.gulpfile])
-  .pipe(eslint({ configFile: paths.eslintrc }))
-  .pipe(eslint.format())
-  .pipe(eslint.failAfterError())
+gulp.task('lint', () =>
+  gulp.src([paths.fullSrc(), path.join(paths.template, '**/*.js'), paths.gulpfile])
+    .pipe(eslint({ configFile: paths.eslintrc }))
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
 )
 
 gulp.task('clean', ['lint'], () => rimrafAsync(paths.dist))
