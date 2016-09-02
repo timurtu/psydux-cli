@@ -43,6 +43,7 @@ if (checkArgs()) {
     'url-loader',
     'file-loader',
     'css-loader',
+    'style-loader',
     'node-sass',
     'sass-loader',
   ]
