@@ -7,10 +7,4 @@ const openAsync = Promise.promisify(require('fs').open)
 
 openAsync('.psydux', 'r')
   .then(() => require('./serve'))
-  .catch(e => {
-    if (e.toString().trim().endsWith('open \'.psydux\'')) {
-      require('./scaffold')
-    } else {
-      log('red', e)
-    }
-  })
+  .catch(e => e.toString().trim().endsWith('open \'.psydux\'') ? require('./scaffold') : log('red', e))
