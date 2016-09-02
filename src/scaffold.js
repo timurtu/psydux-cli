@@ -50,7 +50,7 @@ if (checkArgs()) {
   
   fs.mkdirAsync(appDir)
     .then(() => execAsync('npm init -y', { cwd: appDir }))
-    .then(() => log('cyan', 'Installing dependencies...'))
+    .then(() => log('cyan', 'Installing development dependencies...'))
     .then(() => execAsync(`npm install -D ${dependencies.join(' ')}`, { cwd: appDir }))
     .then(() => {
       log('green', 'New application created successfully.')
