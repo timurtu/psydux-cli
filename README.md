@@ -1,5 +1,5 @@
 
-# Psydux Command-line Interface
+# [Psydux](https://github.com/timurtu/psydux) Command-line Interface
 
 ## Prerequisite
 
