@@ -1,8 +1,8 @@
-import psy from 'psydux'
+import { el } from 'psydux'
 
 
 const list = (...items) =>
-  psy.el('ul', { class: 'list-group' }, () => items.map(item =>
-    psy.el('li', { class: 'list-group-item' }, () => item)))
+  el('ul', { class: 'list-group' }, () => items.map(item =>
+    el('li', { class: 'list-group-item' }, () => item)))
 
 export default list

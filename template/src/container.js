@@ -1,6 +1,6 @@
-import psy from 'psydux'
+import { el } from 'psydux'
 
 
-const container = (...elements) => psy.el('div', { class: 'jumbotron' }, () => elements)
+const container = (...elements) => el('div', { class: 'jumbotron' }, () => elements)
 
 export default container

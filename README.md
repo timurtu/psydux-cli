@@ -1,6 +1,10 @@
 
 # [Psydux](https://github.com/timurtu/psydux) Command-line Interface
 
+Psydux is a modern component-based front-end JavaScript framework.
+
+
+
 ## Prerequisite
 
 - __You must have [node](https://nodejs.org) installed on your computer.__
@@ -24,3 +28,7 @@
 
 - `psydux -port 8080` start up the dev server at port 8080
 - `psydux -p 3000` start up the dev server at port 3000
+
+### [Getting started](docs/getting-started.md)
+
+### [Contributing](docs/contributing.md)

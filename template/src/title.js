@@ -1,6 +1,6 @@
-import psy from 'psydux'
+import { el } from 'psydux'
 
 
-const title = message => psy.el('h1', { class: 'display-3' }, () => message)
+const title = message => el('h1', { class: 'display-3' }, () => message)
 
 export default title
