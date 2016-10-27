@@ -55,6 +55,7 @@ const input = el('input', {
 ```
 
 The el or element function takes more than just the type of your element. Specifically, it takes 3 different things.
+
 1. Type of element (string)
 2. Attributes (object)
 3. Callback (function)
