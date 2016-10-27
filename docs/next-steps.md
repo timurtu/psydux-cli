@@ -4,6 +4,9 @@ This element is getting pretty big so let's refactor by creating our own functio
 
 
 ```javascript
+import { el } from 'psydux'
+
+
 const style = 'margin: 1rem'
 
 const title = msg => el('h1', {

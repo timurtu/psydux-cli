@@ -30,9 +30,9 @@ Remove every file from the __src__ folder so we can start our todo application f
 Let's create our first element. Create a file called __app.js__ and program the following.
 
 ```javascript
-import psy from 'psydux'
+import { el } from 'psydux'
 
-psy.el('h1', {}, function () {
+el('h1', {}, function () {
   return 'Hello, world!'
 })
 ```
@@ -48,7 +48,7 @@ If you run psydux from the psydux-cli at this point you should see __'Hello, wor
 Remove the line we created and program the following
 
 ```javascript
-const input = psy.el('input', {
+const input = el('input', {
   placeholder: 'Add a new todo!',
   autoFocus: true
 })
@@ -62,18 +62,18 @@ The el or element function takes more than just the type of your element. Specif
 What's the callback for? I'll explain by fixing our current problem. If you look at the browser you'll see that our element is squished up against the side. It's hurting my eyes. Let's give it some pre-built padding with bootstrap.
 
 ```javascript
-import psy from 'psydux'
+import { el } from 'psydux'
 
-const h1 = psy.el('h1', {}, function () {
+const h1 = el('h1', {}, function () {
   return 'Todo List'
 })
 
-const input = psy.el('input', {
+const input = el('input', {
   placeholder: 'Add a new todo!',
   autoFocus: true
 })
 
-psy.el('div', { class: 'container' }, function () {
+el('div', { class: 'container' }, function () {
   return [ h1, input ]
 })
 ```
@@ -81,27 +81,11 @@ psy.el('div', { class: 'container' }, function () {
 Ah that's much better. We could also write it like this.
 
 ```javascript
-psy.el('div', {
-  class: 'container'
-}, function() {
-  return [
-    psy.el('h1', {}, function () {
-      return 'Todo List'
-    }),
-    psy.el('input', {
-      placeholder: 'Add a new todo!',
-      autoFocus: true
-    })
-  ]
-})
-```
+import { el } from 'psydux'
 
-Then, if we were to sprinkle in some es6...
-
-```javascript
-psy.el('div', { class: 'container' }, () => [
-  psy.el('h1', {}, () => 'Todo List'),
-  psy.el('input', {
+el('div', { class: 'container' }, () => [
+  el('h1', {}, () => 'Todo List'),
+  el('input', {
     placeholder: 'Add a new todo!',
     autoFocus: true
   })
@@ -111,14 +95,18 @@ psy.el('div', { class: 'container' }, () => [
 Next let's add a button
 
 ```javascript
-psy.el('div', { class: 'container' }, () => [
-  psy.el('h1', {}, () => 'Todo List'),
-  psy.el('input', {
+import { el } from 'psydux'
+
+el('div', { class: 'container' }, () => [
+  el('h1', {}, () => 'Todo List'),
+  el('input', {
     placeholder: 'Add a new todo!',
     autoFocus: true
   }),
-  psy.el('button', {}, () => 'Add todo')
+  el('button', {}, () => 'Add todo')
 ])
 ```
+
+At this point you should be seeing a padded h1, input, and button all with corresponding text in your browser.
 
 [Next steps](next-steps.md)
