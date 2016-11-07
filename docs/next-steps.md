@@ -85,3 +85,5 @@ container(
 ```
 
 You will see that we now have a global reference to a todos variable. This will be used to store todos as strings. To test that this works we will now program the button and submit logic to make this thing work as expected. First, make sure you change our container to a form for easy submits and implement the __addTodo__ function accordingly.
+
+TODO: rest of this guide
