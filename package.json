@@ -1,6 +1,6 @@
 {
   "name": "psydux-cli",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Command-line interface for the Psydux framework.",
   "main": "dist/index.js",
   "bin": {
