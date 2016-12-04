@@ -1,13 +1,14 @@
 
-# [Psydux](https://github.com/timurtu/psydux) Command-line Interface
+# Psydux CLI
 
-Psydux is a modern component-based front-end JavaScript framework.
+Command-line Interface for the [Psydux Framework](https://github.com/timurtu/psydux)
 
+What does the Psydux CLI do?
 
-
-## Prerequisite
-
-- __You must have [node](https://nodejs.org) installed on your computer.__
+- Scaffolds new Psydux applications
+- Transpiles es2015 and es2016
+- Bundles for production on file change
+- Serves Psydux applications
 
 ## Install
 
@@ -15,20 +16,36 @@ Psydux is a modern component-based front-end JavaScript framework.
 
 ## Create a new Psydux application
 
-- `psydux my-app` creates a new application named __my-app__ in the current directory.
+```
+psydux my-app
+```
 
 ## Start the development server
 
-- `cd` into a psydux application
-- `psydux` to start the dev server
+- `cd my-app` to change directories into the newly created Psydux application titled __my-app__.
+
+- `psydux` to start the development server
+
+- You can only start the Psydux development server when your current directory is a Psydux application's __root__ folder.
+
+- If you make a change to a Psydux application's source code and save that change while the Psydux CLI development
+server is running then the Psydux CLI will use [Webpack](https://webpack.github.io) to bundle a production ready application to __my-app/.psydux/dist__.
+- You can make changes to the webpack configuration file included in the root directory if you need to. By default the
+ webpack configuration will
+
+  - Transpile ES6
+
+  - Compile Sass (SCSS) and CSS
+
+  - Load images and URLs
 
 ## Command-line arguments
 
 ### -port -p
 
-- `psydux -port 8080` start up the dev server at port 8080
-- `psydux -p 3000` start up the dev server at port 3000
+- `psydux -port 8080` start up the development server at port 8080
 
-### [Getting started](docs/getting-started.md)
+- `psydux -p 3000` start up the development server at port 3000
 
-### [Contributing](docs/contributing.md)
+### [Psydux Framework](https://github.com/timurtu/psydux)
+### [Contributing](CONTRIBUTING.md)
