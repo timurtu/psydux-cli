@@ -1,8 +1,8 @@
-import './app.scss'
-import container from './container'
-import title from './title'
-import sub from './sub'
-import list from './list'
+import './styles/main.scss'
+import container from './components/container'
+import title from './components/title'
+import sub from './components/sub'
+import list from './components/list'
 
 
 container(
