@@ -32,8 +32,6 @@ export default function list(...items) {
  * as the function above, but with arrow functions.
  */
 
-// const list = (...items) =>
+// export default (...items) =>
 //   el('div', { class: 'list-group' }, () => items.map(item =>
-//     el('a', { id: item, class: 'list-group-item', href: `#{item}` }, () => item)))
-//
-// export default list
+//     el('a', { id: item, class: 'list-group-item', href: `#${item}` }, () => item)))

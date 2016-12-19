@@ -13,6 +13,4 @@ export default function sub(message) {
  * as the function above, but with arrow functions.
  */
 
-// const sub = message => el('p', { class: 'lead' }, () => message)
-//
-// export default sub
+// export default message => el('p', { class: 'lead' }, () => message)

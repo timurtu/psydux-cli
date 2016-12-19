@@ -13,6 +13,4 @@ export default function container(...elements) {
  * as the function above, but with arrow functions.
  */
 
-// const container = (...elements) => el('div', { class: 'well' }, () => elements)
-//
-// export default container
+// export default (...elements) => el('div', { class: 'well' }, () => elements)

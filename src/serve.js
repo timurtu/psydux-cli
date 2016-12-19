@@ -7,7 +7,7 @@ import log from 'gutil-color-log'
 import { argv } from 'yargs'
 import express from 'express'
 import paths from './paths'
-require('./build')
+import './build'
 
 
 const port = argv.port || argv.p || 8080

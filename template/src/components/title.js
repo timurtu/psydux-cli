@@ -13,6 +13,4 @@ export default function title(message) {
  * as the function above, but with arrow functions.
  */
 
-// const title = message => el('h1', { class: 'display-3' }, () => message)
-//
-// export default title
+// export default message => el('h1', { class: 'display-3' }, () => message)
