@@ -5,9 +5,9 @@
 import path from 'path'
 import gulp from 'gulp'
 import log from 'gutil-color-log'
-import paths from './paths'
 import Promise from 'bluebird'
 const execAsync = Promise.promisify(require('child_process').exec)
+import paths from './paths'
 
 
 const build = () => execAsync(path.join(paths.bin(), 'webpack'))
@@ -16,4 +16,5 @@ const build = () => execAsync(path.join(paths.bin(), 'webpack'))
 
 gulp.watch(path.join(paths.src(), '**/*'), build)
 
-build()
+build().then(() => require('./port')
+  .then(port => log('cyan', `Open up a web browser to http://localhost:${port}`)))
