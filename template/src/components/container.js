@@ -2,9 +2,9 @@ import { el } from 'psydux'
 
 
 export default function container(...elements) {
-  return el('div', { class: 'well' }, function () {
+  return el('div', function () {
     return elements
-  })
+  }, { class: 'well' })
 }
 
 
@@ -13,4 +13,4 @@ export default function container(...elements) {
  * as the function above, but with arrow functions.
  */
 
-// export default (...elements) => el('div', { class: 'well' }, () => elements)
+// export default (...elements) => el('div', () => elements, { class: 'well' })

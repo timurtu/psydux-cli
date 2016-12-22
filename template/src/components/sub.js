@@ -2,9 +2,9 @@ import { el } from 'psydux'
 
 
 export default function sub(message) {
-  return el('p', { class: 'lead' }, function () {
+  return el('p', function () {
     return message
-  })
+  }, { class: 'lead' })
 }
 
 
@@ -13,4 +13,4 @@ export default function sub(message) {
  * as the function above, but with arrow functions.
  */
 
-// export default message => el('p', { class: 'lead' }, () => message)
+// export default message => el('p', () => message, { class: 'lead' })
