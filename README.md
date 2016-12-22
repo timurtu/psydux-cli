@@ -12,7 +12,9 @@ What does the Psydux CLI do?
 
 ## Install
 
-- `npm install -g psydux-cli`
+```
+npm install -g psydux-cli
+```
 
 ## Create a new Psydux application
 
