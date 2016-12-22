@@ -2,9 +2,9 @@ import { el } from 'psydux'
 
 
 export default function title(message) {
-  return el('h1', { class: 'display-3' }, function () {
+  return el('h1', function () {
     return message
-  })
+  }, { class: 'display-3' })
 }
 
 
@@ -13,4 +13,4 @@ export default function title(message) {
  * as the function above, but with arrow functions.
  */
 
-// export default message => el('h1', { class: 'display-3' }, () => message)
+// export default message => el('h1', () => message, { class: 'display-3' })

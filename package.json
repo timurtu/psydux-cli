@@ -1,6 +1,10 @@
 {
   "name": "psydux-cli",
+<<<<<<< HEAD
   "version": "2.2.2",
+=======
+  "version": "2.2.3",
+>>>>>>> 116161cea093c7848f555d083349e64e1fd1278b
   "description": "Command-line interface for the Psydux framework.",
   "main": "dist/index.js",
   "bin": {
@@ -41,6 +45,7 @@
   },
   "dependencies": {
     "bluebird": "^3.4.1",
+    "detect-port": "^1.0.7",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gutil-color-log": "^1.0.2",
