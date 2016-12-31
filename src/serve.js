@@ -13,7 +13,7 @@ const app = express()
 
 app.use(express.static(path.join(paths.dist())))
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(paths.dist(), 'index.html'))
 })
 
